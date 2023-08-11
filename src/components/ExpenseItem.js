@@ -1,15 +1,10 @@
 import React from 'react';
 // css 로딩
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
 
 const Expenseltem = ({title, price: propsPrice, date}) => {
 
-  // console.log(props);
-  // const price = 99999;
-
-  // const expenseDate = date;
-  // const expenseTitle = title;
-  // const expensePrice = propsPrice;
 
   // 1자리 숫자를 2자리수로 변환하는 함수
   const make2digit = (text) => {
@@ -30,7 +25,7 @@ const Expenseltem = ({title, price: propsPrice, date}) => {
 
   return (
     <div className="expense-item">
-      <div>{makeFormattedDate()}</div>
+      <ExpenseDate date={date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">{formattedPrice}원</div>
