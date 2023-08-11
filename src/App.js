@@ -1,7 +1,7 @@
 import React from 'react';
-import ExpenseItem from './components/ExpenseItem';
-import ExpenseList from './components/ExpenseList';
-import Hello from './Hello';
+import ExpenseList from './components/Expenses/ExpenseList';
+import NewExpense from './components/NewExpense/NewExpense';
+
 
 const App = () => {
 
@@ -25,9 +25,10 @@ const App = () => {
   ];
 
   console.log('App 실행!!');
-  
+
   return (
     <>
+      <NewExpense />
       <ExpenseList items={expenses} />
     </>
   );
