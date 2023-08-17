@@ -2,14 +2,20 @@ import React from 'react';
 import './CourseList.css';
 import CourseItem from './CourseItem';
 
-const CourceList = ({ items , onDelete}) => {
+const CourseList = ({ items, onDelete }) => {
   return (
-    <ul className='goal-list'>
-        {items.map((item) => (
-            <CourseItem key={item.id} item={item} omDelete={onDelete}/>
-        ))}
+    <ul className="goal-list">
+      {items.map((item) => {
+        return (
+          <CourseItem
+            key={item.id}
+            item={item}
+            onDelete={onDelete}
+          />
+        );
+      })}
     </ul>
   );
 };
 
-export default CourceList;
+export default CourseList;
