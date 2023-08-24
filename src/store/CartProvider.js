@@ -12,6 +12,7 @@ const cartReducer = (state, action) => {
   if (action.type === 'ADD') {
 
     const updatedItems = [...state.items, action.item];
+    // console.log(updatedItems);
 
     return {
       items: updatedItems
